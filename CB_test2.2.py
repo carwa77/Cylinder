@@ -9,7 +9,7 @@ mitt_fönster = tk.Tk()
 
 # Huvudrubrik för programmet
 mitt_fönster.title("Beräkning för cylinder")
-mitt_fönster.geometry("1000x1000")
+mitt_fönster.geometry("1500x1000")
 
 
 # tk.Fram ger klassen möjligheten att använda
