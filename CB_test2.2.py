@@ -1,4 +1,5 @@
-# Bytt strategi och använt klasser Hej
+# Bytt strategi och använt klasser  Hej
+
 
 import tkinter as tk
 
