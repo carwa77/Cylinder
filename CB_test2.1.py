@@ -1,39 +1,47 @@
-#Bytt strategi och anvant klasser 
+# Bytt strategi och anvant klasser
 
 import tkinter as tk
 
-mitt_fonster = tk.Tk ()                             # Vanligt ar att skriva root = Tk (). Det har ar huvudapplikationen for fonstret i programmet. 
-                                                    # Den har en titel och granser och forses med fonsterhanteraren. Detta måste ske innan 
-                                                    # någon annan widget kan skapas. 
+# Vanligt ar att skriva root = Tk (). Det har ar huvudapplikationen for fonstret i programmet.
+mitt_fonster = tk.Tk()
+# Den har en titel och granser och forses med fonsterhanteraren. Detta måste ske innan
+# någon annan widget kan skapas.
 
-mitt_fonster.title("Berakning for cylinder")        # Huvudrubrik for programmet 
+# Huvudrubrik for programmet
+mitt_fonster.title("Berakning for cylinder")
 
-class Applikation(tk.Frame):                        # tk.Fram ger klassen mojligheten att anvanda
-                                                    # ramverket for tk.Frame alltså rektangulara regioner på skarmen
 
-    def __init__(self, master=None):                # Definerar en metod med __init__ (Denna metod anropas nar ett objekt av klassen skapas)
-                                                    # Alla instansmetoder har inledande argument (self) 
-                                        
+# tk.Fram ger klassen mojligheten att anvanda
+class Applikation(tk.Frame):
+                                                     # ramverket for tk.Frame alltså rektangulara regioner på skarmen
 
-        super().__init__(master)                    # Osaker hor men kan vara onodigt just for mitt behov
-                                                    # For att kunna anropa korrekt basklass utan att referera direkt till klassens namn, 
-                                                    # har man en speciell metod, super (), som returnerar en referens till basklassen.
+    # Definerar en metod med __init__ (Denna metod anropas nar ett objekt av klassen skapas)
+    def __init__(self, master=None):
+                                                     # Alla instansmetoder har inledande argument (self)
 
-        self.master = master                        # Master ar en foraldrar-widget och ar valbar som parameter, default = none
+        # Osaker hor men kan vara onodigt just for mitt behov
+        super().__init__(master)
+        # For att kunna anropa korrekt basklass utan att referera direkt till klassens namn,
+        # har man en speciell metod, super (), som returnerar en referens till basklassen.
 
-        #self.pack()
+        # Master ar en foraldrar-widget och ar valbar som parameter, default = none
+        self.master = master
 
-        self.skapa_fonster()                        # Gissning - For att kunna skapa widgets i klassen
+        # self.pack()
 
- 
+        # Gissning - For att kunna skapa widgets i klassen
+        self.skapa_fonster()
 
     def skapa_fonster(self):
+        hej = 1
 
         # Skapar rubriker som widget
 
-        self.minRubrik1 = tk.Label(mitt_fonster, text="Yttre Diameter (mm):")
+        self.minRubrik1 = tk.Label(
+            mitt_fonster, text="Yttre Diameter (mm):")
 
-        self.minRubrik2 = tk.Label(mitt_fonster, text="Inre Diameter (mm):")
+        self.minRubrik2 = tk.Label(
+            mitt_fonster, text="Inre Diameter (mm):")
 
         self.minRubrik3 = tk.Label(mitt_fonster, text="Langd (mm):")
 
@@ -46,10 +54,12 @@ class Applikation(tk.Frame):                        # tk.Fram ger klassen mojlig
         self.minRubrik7 = tk.Label(mitt_fonster, text="Spanning (MPa):")
 
         self.minRubrik8 = tk.Label(mitt_fonster)
-    
+
         self.minRubrik9 = tk.Label(mitt_fonster)
 
-        
+        hej = 2
+
+        print(hej)
 
         # Visa den på skramen
 
@@ -67,10 +77,9 @@ class Applikation(tk.Frame):                        # tk.Fram ger klassen mojlig
 
         self.minRubrik7.grid(row=1, column=6)
 
-
         # Definera rutan
 
-        # Den har delen behovs goras for att kunna få inmatningen från anvandaren till en variabel 
+        # Den har delen behovs goras for att kunna få inmatningen från anvandaren till en variabel
         # --------------------------------
         self.e1 = tk.Entry(mitt_fonster)
 
@@ -128,10 +137,10 @@ class Applikation(tk.Frame):                        # tk.Fram ger klassen mojlig
 
         # Knappar - Definition
 
-        self.minKnapp = tk.Button(mitt_fonster, text="Utfor berakning", command=self.berakning)
+        self.minKnapp = tk.Button(
+            mitt_fonster, text="Utfor berakning", command=self.berakning)
 
-        self.minKnapp.grid (row = 4, column = 5)       
-
+        self.minKnapp.grid(row=4, column=5)
 
     def berakning(self):
 
@@ -156,12 +165,11 @@ class Applikation(tk.Frame):                        # tk.Fram ger klassen mojlig
         tojning = (delta/L)*100
 
         self.minRubrik8["text"] = str(tojning)
-        self.minRubrik8.grid(row =0,column =5)
+        self.minRubrik8.grid(row=0, column=5)
 
         self.minRubrik9["text"] = str(s)
-        self.minRubrik9.grid(row =0,column =6)
+        self.minRubrik9.grid(row=0, column=6)
 
-        
 
 app = Applikation(master=mitt_fonster)
 app.mainloop()
