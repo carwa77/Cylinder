@@ -122,5 +122,6 @@ class Applikation(tk.Frame):
         self.minRubrik9.grid(row=0, column=6)
 
 
-app = Applikation(master=mitt_fönster)
-app.mainloop()
+if __name__ == "__main__":
+    app = Applikation(master=mitt_fönster)
+    app.mainloop()
