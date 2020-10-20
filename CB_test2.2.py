@@ -1,6 +1,5 @@
 # Bytt strategi och använt klasser  Hej
 
-
 import tkinter as tk
 
 # Vanligt är att skriva root = Tk (). Det här är huvudapplikationen för fönstret i programmet.
