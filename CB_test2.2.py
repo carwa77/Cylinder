@@ -10,8 +10,9 @@ mitt_fönster = tk.Tk()
 mitt_fönster.title("Beräkning för cylinder")
 mitt_fönster.geometry("1500x1000")
 
-
 # tk.Fram ger klassen möjligheten att använda
+
+
 class Applikation(tk.Frame):
                                                     # ramverket för tk.Frame alltså rektangulära regioner på skärmen
 
@@ -63,7 +64,6 @@ class Applikation(tk.Frame):
         self.e1["textvariable"] = self.d_2
 
         # --------------------------------
-
         self.e2 = tk.Entry(mitt_fönster, width=15)
         self.d_1 = tk.IntVar()
         self.d_1.set(10)
@@ -113,10 +113,8 @@ class Applikation(tk.Frame):
 
         # Töjning
         töjning = round((delta/L)*100, 2)
-
         self.minRubrik8["text"] = str(töjning)
         self.minRubrik8.grid(row=0, column=5)
-
         self.minRubrik9["text"] = str(s)
         self.minRubrik9.grid(row=0, column=6)
 
