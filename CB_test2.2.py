@@ -1,5 +1,6 @@
 
 import tkinter as tk
+import math
 
 # Vanligt är att skriva root = Tk (). Det här är huvudapplikationen för fönstret i programmet.
 mitt_fönster = tk.Tk()
