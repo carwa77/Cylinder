@@ -12,14 +12,14 @@ mitt_fönster.title("Beräkning för cylinder")
 mitt_fönster.geometry("800x800")
 
 # tk.Fram ger klassen möjligheten att använda
-
+# ramverket för tk.Frame alltså rektangulära regioner på skärmen
+# Alla instansmetoder har inledande argument (self)
 
 class Applikation(tk.Frame):
-                                                    # ramverket för tk.Frame alltså rektangulära regioner på skärmen
-
+                                                
     # Definerar en metod med __init__ (Denna metod anropas när ett objekt av klassen skapas)
     def __init__(self, master=None):
-                                                    # Alla instansmetoder har inledande argument (self)
+                                                    
 
         # Osäker hör men kan vara onödigt just för mitt behov
         super().__init__(master)
