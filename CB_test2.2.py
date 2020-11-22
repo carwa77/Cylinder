@@ -8,7 +8,7 @@ mitt_fönster = tk.Tk()
 
 # Huvudrubrik för programmet
 mitt_fönster.title("Beräkning för cylinder")
-mitt_fönster.geometry("1500x1000")
+mitt_fönster.geometry("800x800")
 
 # tk.Fram ger klassen möjligheten att använda
 
@@ -25,7 +25,7 @@ class Applikation(tk.Frame):
         # För att kunna anropa korrekt basklass utan att referera direkt till klassens namn,
         # har man en speciell metod, super (), som returnerar en referens till basklassen.
 
-        # Master är en föräldrar-widget och är valbar som parameter, default = none
+        # Master är en föräldrar-wid get och är valbar som parameter, default = none
         self.master = master
 
         # self.pack()
@@ -52,8 +52,8 @@ class Applikation(tk.Frame):
         self.minRubrik3.grid(row=2, column=1)
         self.minRubrik4.grid(row=3, column=1)
         self.minRubrik5.grid(row=4, column=1)
-        self.minRubrik6.grid(row=1, column=5)
-        self.minRubrik7.grid(row=1, column=6)
+        self.minRubrik6.grid(row=0, column=5)
+        self.minRubrik7.grid(row=0, column=6)
 
         # Definera rutan
         # Den här delen behövs göras för att kunna få inmatningen från användaren till en variabel
@@ -114,9 +114,9 @@ class Applikation(tk.Frame):
         # Töjning
         töjning = round((delta/L)*100, 2)
         self.minRubrik8["text"] = str(töjning)
-        self.minRubrik8.grid(row=0, column=5)
+        self.minRubrik8.grid(row=1, column=5)
         self.minRubrik9["text"] = str(s)
-        self.minRubrik9.grid(row=0, column=6)
+        self.minRubrik9.grid(row=1, column=6)
 
 
 if __name__ == "__main__":
