@@ -94,7 +94,7 @@ class Applikation(tk.Frame):
 
         # Knappar - Definition
         self.minKnapp = tk.Button(
-            mitt_fönster, text="Utför beräkning", command=self.beräkning)
+            mitt_fönster, text="Beräkna", command=self.beräkning)
         self.minKnapp.grid(row=4, column=5)
 
     def beräkning(self):
@@ -106,7 +106,7 @@ class Applikation(tk.Frame):
         E = self.E.get()
 
         # Beräkningar
-        A = (3.14/4) * ((d_2**2) - (d_1**2))  # mm2
+        A = (math.pi/4) * ((d_2**2) - (d_1**2))  # mm2
         s = round((p/A), 2)  # MPa
 
         # Deflektion
